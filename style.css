@@ -1,0 +1,519 @@
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #1a1a1a;
+    }
+    .full-width {
+      width: 100%;
+      display: block;
+    }
+    .section {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero {
+      /* background: linear-gradient(to bottom right, #ffcc8f, #ffa500); */
+      background: linear-gradient(to right, rgba(255, 165, 0, 0.8), rgba(255, 140, 0, 0.8)), url('assets/famplay.jpg') center/cover no-repeat;
+      color: #1a1a1a;
+    }
+    .orange-bg {
+      height: 450px;
+      background: linear-gradient(to bottom right, #ffcc8f, #ffa500); 
+      /* background: linear-gradient(to right, rgba(255, 165, 0, 0.8), rgba(255, 140, 0, 0.8)), url('assets/famplay.jpg') center/cover no-repeat; */
+      color: #1a1a1a;
+    }
+    .blue-bg {
+      background: linear-gradient(to right, rgba(173, 216, 230, 0.85), rgba(135, 206, 250, 0.85)), url('assets/fieldplay.jpg') center/cover no-repeat;
+      color: #1a1a1a;
+    }
+
+    .blue-bg h2{
+      font-size:rem;
+    }
+    .green-bg {
+      background: linear-gradient(to right, rgb(127 216 127 / 85%), #1f7135bf), url('assets/screenplay.jpg') center/cover no-repeat;
+      color: white;
+    }
+    .brown-bg {
+      background-color: #b9a16b;
+    }
+    .testimonials {
+      background-color: #0077b6;
+      color: white;
+      padding: 60px 20px;
+    }
+    .content {
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .content.reverse {
+      flex-direction: row-reverse;
+    }
+    .text, .image {
+      flex: 1;
+      min-width: 300px;
+    }
+    .image img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1000px;
+      margin-top: 40px;
+    }
+    .feature {
+      flex: 1 1 250px;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .feature img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .columns {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin-top: 20px;
+    }
+    .columns div {
+      flex: 1 1 250px;
+      padding: 20px;
+    }
+    .testimonial-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .testimonial {
+      background-color: #e0f0ff;
+      color: #000;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+    }
+    h1, h2, h3, h4 {
+      margin-bottom: 16px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 0;
+    }
+    li {
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    li i {
+      font-size: 18px;
+      color: #fff;
+    }
+    .testimonial ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align:left;
+}
+
+.testimonial li {
+  display: list-item;
+  align-items: start;
+  text-align:left;
+  gap: 0;
+}
+.benefits-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.benefits-list i {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.benefits-list strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.benefits-list p {
+  margin: 0;
+  font-size: 15px;
+  color: #f1f1f1;
+}.hero {
+  color: #1a1a1a;
+  padding: 80px 20px;
+  text-align: center;
+  /* min-height:600px; */
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.cta-button {
+  background-color: #ffffff;
+  color: #ff9800;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff3e0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.blue-bg {
+  background: linear-gradient(to right, rgba(173, 216, 230, 0.85), rgba(135, 206, 250, 0.85)), url('assets/fieldplay.jpg') center/cover no-repeat;
+  color: #1a1a1a;
+}
+.section {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.early-benefits {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.early-benefits h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #ff9800;
+}
+
+.early-benefits ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.early-benefits li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.early-benefits-floating {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(243, 242, 242, 0.85); /* was 0.95, now more transparent */
+  padding: 16px 20px;
+  border-radius: 12px;
+  max-width: 280px;
+  font-size: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(6px); /* soft blur behind it */
+}
+
+.early-benefits-floating:hover {
+  transform: translateY(-3px);
+}
+
+.early-benefits-floating h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ff9800;
+  font-weight: 700;
+}
+
+.early-benefits-floating ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.early-benefits-floating li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.early-signup-form {
+  position: fixed;
+  bottom: 30px;
+  right: 330px; /* To the left of the benefit box */
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(6px);
+}
+
+.early-signup-form form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.early-signup-form input[type="email"] {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.early-signup-form button {
+  padding: 8px 12px;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.early-signup-form button:hover {
+  background-color: #fb8c00;
+}
+
+
+/* Layout split styles */
+.content.split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Text and form containers */
+.content.split .text, 
+.content.split .cta-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* CTA form styling */
+.cta-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cta-form h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-form p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.cta-form input,
+.cta-form textarea {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.cta-form button {
+  background-color: #20a05d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-form button:hover {
+  background-color: #18894e;
+}
+
+.cta-form small {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+/* Ensure Montserrat is applied */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reusable Section Styles */
+.section {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.orange-bg {
+  background-color: #ffe1c4;
+}
+
+/* Flex layout for text and form side-by-side */
+.content.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Text Content Styling */
+.content.split .text {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* CTA Form Styling */
+.cta-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cta-form h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.cta-form p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.cta-form input,
+.cta-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.cta-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.cta-form button {
+  padding: 12px;
+  background-color: #ff7c48;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-form button:hover {
+  background-color: #e66a35;
+}
+
+.cta-form small {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content.split {
+    flex-direction: column;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}

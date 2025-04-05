@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unplug & Play</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script>
+    function scrollToForm(e) {
+      e.preventDefault();
+      const form = document.getElementById("signup-form");
+      if (form) {
+        const offset = -95; // adjust as needed
+        const top = form.getBoundingClientRect().top + window.scrollY + offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <section class="hero full-width">
+    <div class="container">
+      <h1>Unplug & Play</h1>
+      <p><i>Give your family the time that they deserve</i></p>
+      <p> It all starts with putting down the screen and picking up something real.</p>
+      <a href="#signup-form" class="cta-button" onclick="scrollToForm(event)">Count Me In!</a>
+
+    </div>
+  </section>
+
+
+  <section class="section orange-bg full-width">
+    <div class="content">
+      <div class="text">
+        <h2>Hands-on Play for Meaningful Moments</h2>
+        <p>Engaging toys and games that promote connection, movement, and creativity for all ages. Enjoy quality time
+          that’s truly screen-free.</p>
+      </div>
+      <div class="image">
+        <img src="assets/famplay.jpg" alt="Family playing together" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section blue-bg full-width">
+    <h2>Featured Products: Move, Learn, and Grow</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/activity-history.png" alt="Active Toys" />
+        <h3>Active Toys</h3>
+        <p>Boost physical activity with jump ropes, frisbees, and Airsoft guns.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/open-book--v1.png" alt="Educational Games" />
+        <h3>Educational Games</h3>
+        <p>Learn and grow with hands-on science kits and strategy board games.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/paint-palette.png" alt="Creative Crafts" />
+        <h3>Creative Crafts</h3>
+        <p>Unleash imagination with art supplies and do-it-yourself craft projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section green-bg full-width">
+    <div class="content reverse">
+      <!-- <div class="image">
+        <img src="assets/screenplay.jpg" alt="Child outside enjoying nature" />
+      </div> -->
+      <form id="signup-form" class="cta-form image" action="https://formspree.io/f/mgvanjyq" method="post">
+        <h2>🎉 Get Notified When We Launch!</h2>
+        <p>Be the first to know — and tell us what you’d love to play!</p>
+        <input type="text" name="name" placeholder="Name (optional)" />
+        <input type="email" name="email" placeholder="Email (required)" required />
+        <textarea name="message" placeholder="What hobbies are you most interested in?"></textarea>
+        <button type="submit">Notify Me</button>
+        <small>🔒 Your privacy matters. We’ll only use your email to send updates.</small>
+        <p id="success-msg"
+          style="visibility: hidden; opacity: 0; transition: opacity 0.5s ease; color: green; margin-top: 10px;">
+          Thanks! We’ll be in touch 🎉
+        </p>
+
+      </form>
+      <div class="text">
+        <h2>Why Ditch the Screen?</h2>
+        <ul class="benefits-list">
+          <li>
+            <i class="fas fa-eye"></i>
+            <div>
+              <strong>Reduce Eye Strain</strong>
+              <p>Give your eyes a break from constant screens and harmful blue light.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-brain"></i>
+            <div>
+              <strong>Improve Focus</strong>
+              <p>Enhance concentration and cognitive development through real-world, tactile play.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-users"></i>
+            <div>
+              <strong>Strengthen Bonds</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section testimonials full-width">
+    <h1>For the Whole Family: Activities for Every Age</h1>
+    <div class="testimonial-boxes">
+      <div class="testimonial">
+        <h4>Toddlers & Preschoolers</h4>
+        <ul>
+          <li>Stacking blocks</li>
+          <li>Interactive toys</li>
+          <li>Ride-on toys</li>
+        </ul>
+      </div>
+      <div class="testimonial">
+        <h4>Kids 6–12</h4>
+        <ul>
+          <li>Board games</li>
+          <li>Science kits</li>
+          <li>Sports equipment</li>
+        </ul>
+      </div>
+      <div class="testimonial">
+        <h4>Teens & Adults</h4>
+        <ul>
+          <li>Strategy games</li>
+          <li>DIY projects</li>
+          <li>Airsoft Toys</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("signup-form");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          const msg = document.getElementById("success-msg");
+          msg.style.visibility = "visible";
+          msg.style.opacity = "1";
+          setTimeout(() => {
+            msg.style.opacity = "0";
+            setTimeout(() => {
+              msg.style.visibility = "hidden";
+            }, 500); // match the transition duration
+          }, 3000);
+
+        } else {
+          alert("Oops! Something went wrong.");
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
